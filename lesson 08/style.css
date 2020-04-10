@@ -1,0 +1,35 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  padding: 2rem; }
+
+#small {
+  background-color: #d25400; }
+  @media (max-width: 480px) {
+    #small {
+      opacity: 1; } }
+
+#medium {
+  background-color: #2b3e50; }
+  @media (max-width: 800px) and (min-width: 481px) {
+    #medium {
+      opacity: 1; } }
+
+#medium-large {
+  background-color: #19bb9d; }
+  @media (max-width: 1200px) and (min-width: 801px) {
+    #medium-large {
+      opacity: 1; } }
+
+#large {
+  background-color: #2a80b9; }
+  @media (min-width: 1201px) {
+    #large {
+      opacity: 1; } }

@@ -1,0 +1,94 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+body {
+  background-color: #f4f4f4;
+  color: #353847; }
+
+.grid {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem; }
+
+.cell {
+  height: calc(50vh - 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-direction: column;
+  padding: 2rem; }
+  .cell div {
+    margin: 1rem; }
+
+.circle {
+  height: 10rem;
+  width: 10rem;
+  border-color: #00bcfd;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%; }
+
+.rectangle {
+  height: 8rem;
+  width: 5rem;
+  border-color: #00bcfd #f68701 #ef27b2 #1dd760;
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-width: 10px 15px; }
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  border: none;
+  background-color: #00bcfd;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  outline: none;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem; }
+
+button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover {
+  background-color: #00a9e4; }
+
+button:active, [type='button']:active, [type='reset']:active, [type='submit']:active {
+  background-color: #33c9fd; }
+
+[type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  outline: none;
+  transition: all .2s ease-in-out;
+  margin-bottom: 1rem;
+  padding: 1rem; }
+
+[type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover {
+  background-color: #e4e4e4; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h1 {
+  font-size: 8.5282687193; }
+
+h2 {
+  font-size: 6.0313074394; }
+
+h3 {
+  font-size: 4.2654225173; }
+
+h4 {
+  font-size: 3.0165647222; }
+
+h5 {
+  font-size: 2.133355532; }
+
+h6 {
+  font-size: 1.508738; }

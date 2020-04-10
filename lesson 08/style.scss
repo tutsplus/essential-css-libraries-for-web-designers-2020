@@ -1,0 +1,53 @@
+// Import MQ.
+@import "../node_modules/mq-scss/mq";
+
+// Breakpoints.
+$BP-small: 480px;
+$BP-medium: 800px;
+$BP-large: 1200px;
+
+// Demo styles.
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    padding: 2rem;
+}
+
+#small {
+    background-color: #d25400;
+
+    @include mq(max, $BP-small) {
+        opacity: 1;
+    }
+}
+
+#medium {
+    background-color: #2b3e50;
+
+    @include mq(inside, $BP-small, $BP-medium) {
+        opacity: 1;
+    }
+}
+
+#medium-large {
+    background-color: #19bb9d;
+
+    @include mq(inside, $BP-medium, $BP-large) {
+        opacity: 1;
+    }
+}
+
+#large {
+    background-color: #2a80b9;
+
+    @include mq(min, $BP-large) {
+        opacity: 1;
+    }
+}

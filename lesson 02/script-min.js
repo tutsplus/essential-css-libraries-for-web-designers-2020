@@ -1,0 +1,1 @@
+var element=document.getElementById("button");element.addEventListener("click",(function(){element.classList.add("animated","shake"),element.addEventListener("animationend",(function(){element.classList.remove("animated","shake")}))}));

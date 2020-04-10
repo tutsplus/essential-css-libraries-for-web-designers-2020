@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential CSS Libraries for Web Designers - Lesson 06</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css">
+    <link rel="stylesheet" href="raster.grid.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <r-grid columns=12 columns-s=6>
+            <r-cell>1</r-cell>
+            <r-cell>2</r-cell>
+            <r-cell>3</r-cell>
+            <r-cell>4</r-cell>
+            <r-cell>5</r-cell>
+            <r-cell>6</r-cell>
+            <r-cell>7</r-cell>
+            <r-cell>8</r-cell>
+            <r-cell>9</r-cell>
+            <r-cell>10</r-cell>
+            <r-cell>11</r-cell>
+            <r-cell>12</r-cell>
+        </r-grid>
+
+        <r-grid columns=12>
+            <r-cell>1 cell by default</r-cell>
+            <r-cell span=4>Span 4</r-cell>
+            <r-cell>1 cell by default</r-cell>
+            <r-cell span=7-12>Start in 7 and end in 12</r-cell>
+        </r-grid>
+
+        <r-grid columns=12>
+            <r-cell span=1+3 span-s=1-6>Start in 1 and span 3</r-cell>
+            <r-cell span=4.. span-s=7-12>Start in 4 and span the rest of the row</r-cell>
+        </r-grid>
+    </div> <!-- end .container -->
+</body>
+</html>

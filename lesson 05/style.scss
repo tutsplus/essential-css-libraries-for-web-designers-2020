@@ -1,0 +1,158 @@
+// Import Bourbon.
+@import "bourbon";
+
+// Colors.
+$color-1: #00bcfd;
+$color-2: #f68701;
+$color-3: #ef27b2;
+$color-4: #1dd760;
+$color-5: rgb(53, 56, 71);
+
+// Contrast switch.
+$contrast-switch-dark-color: rgba(53, 56, 71, .8);
+$contrast-switch-light-color: #ffffff;
+
+// Modular scale.
+// $minor-second: 1.067;
+// $major-second: 1.125;
+// $minor-third: 1.2;
+// $major-third: 1.25;
+// $perfect-fourth: 1.333;
+// $augmented-fourth: 1.414;
+// $perfect-fifth: 1.5;
+// $minor-sixth: 1.6;
+// $golden: 1.618;
+// $major-sixth: 1.667;
+// $minor-seventh: 1.778;
+// $major-seventh: 1.875;
+// $octave: 2;
+// $major-tenth: 2.5;
+// $major-eleventh: 2.667;
+// $major-twelfth: 3;
+// $double-octave: 4;
+
+$bourbon: (
+  "modular-scale-ratio": 1.414,
+);
+
+// Demo styles.
+body {
+    background-color: #f4f4f4;
+    color: $color-5;
+}
+
+.grid {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.cell {
+    height: calc(50vh - 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 2rem;
+
+    div {
+        margin: 1rem;
+    }
+}
+
+// Bourbon.
+.circle {
+    @include size(10rem);
+    @include border-color($color-1);
+    @include border-style(solid);
+    @include border-width(10px);
+    
+    border-radius: 50%;
+}
+
+.rectangle {
+    @include size(5rem, 8rem);
+    @include border-color($color-1 $color-2 $color-3 $color-4);
+    @include border-style(solid dashed null);
+    @include border-width(10px 15px);
+}
+
+#{$all-buttons} {
+    border: none;
+    background-color: $color-1;
+    color: contrast-switch($color-1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    outline: none; // Chrome
+    
+    @include padding(1rem 2rem);
+    @include margin(null null 1rem);
+}
+
+#{$all-buttons-hover} {
+    background-color: shade($color-1, 10%);
+}
+
+#{$all-buttons-active} {
+    background-color: tint($color-1, 20%);
+}
+
+#{$all-text-inputs} {
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    outline: none; // Chrome
+    transition: all .2s ease-in-out;
+
+    @include margin(null null 1rem);
+    @include padding(1rem);
+}
+
+#{$all-text-inputs-hover} {
+    background-color: shade(#f0f0f0, 5%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-stack-helvetica;
+    // font-family: $font-stack-lucida-grande;
+    // font-family: $font-stack-verdana;
+    // font-family: $font-stack-system;
+    // font-family: $font-stack-garamond;
+    // font-family: $font-stack-georgia;
+    // font-family: $font-stack-hoefler-text;
+    // font-family: $font-stack-consolas;
+    // font-family: $font-stack-courier-new;
+    // font-family: $font-stack-monaco;
+}
+
+h1 {
+    font-size: modular-scale(6, $minor-second);
+}
+
+h2 {
+    font-size: modular-scale(5, $minor-second);
+}
+
+h3 {
+    font-size: modular-scale(4, $minor-second);
+}
+
+h4 {
+    font-size: modular-scale(3, $minor-second);
+}
+
+h5 {
+    font-size: modular-scale(2, $minor-second);
+}
+
+h6 {
+    font-size: modular-scale(1, $minor-second);
+}

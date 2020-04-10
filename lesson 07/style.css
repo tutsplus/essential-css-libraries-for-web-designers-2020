@@ -1,0 +1,34 @@
+/* Demo styles */
+.grid {
+    display: flex;
+}
+
+.container {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#c1 {
+    background-color: #353847;
+}
+
+#c2 {
+    background-color: #2f313f;
+}
+
+#c3 {
+    background-color: #262833;
+}
+
+#c4 {
+    background-color: #1d1e25;
+}
+
+/* SpinKit. */
+.sk-plane {
+    background-color: #d75f62;
+}

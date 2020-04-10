@@ -1,0 +1,86 @@
+// RFS configuration.
+$rfs-unit: px; // px, rem
+$rfs-breakpoint: 1300;
+$rfs-breakpoint-unit: rem; // px, em, rem
+$rfs-factor: 100;
+
+// Import RFS.
+@import "rfs/scss";
+
+// Demo styles.
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: rgb(53, 56, 71);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: rgba(53, 56, 71, .8);
+    margin: 1.5rem 0;
+    width: 6rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Halant', serif;
+    line-height: 1.5;
+    margin: 0 0 1.5rem;
+}
+
+p {
+    color: rgba(53, 56, 71, .8);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+// RFS.
+h1 {
+    @include font-size(3rem);
+    font-weight: 500;
+}
+
+h2 {
+    @include font-size(2.4rem);
+    font-weight: 300;
+}
+
+h3 {
+    @include font-size(2rem);
+    font-weight: 300;
+}
+
+.content {
+    background-color: #ffffff;
+    max-width: 50rem;
+    border-radius: 4px;
+
+    @include padding(3rem);
+    @include margin(3rem);
+}
+
+.button {
+    @include padding(1rem 2rem);
+
+    text-decoration: none;
+    border-radius: 100px;
+    display: inline-block;
+    border: 2px solid #87ad65;
+    color: #87ad65;
+    font-weight: bold;
+    transition: all .1s ease-in-out;
+    
+    &.button:hover {
+        background-color: #87ad65;
+        color: #ffffff;
+    }
+}
